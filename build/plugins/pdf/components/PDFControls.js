@@ -39,15 +39,15 @@ var PDFControls = function () {
     var currentDocument = (mainState === null || mainState === void 0 ? void 0 : mainState.currentDocument) || null;
     return (react_1.default.createElement(Container, { id: "pdf-controls" },
         paginated && numPages > 1 && react_1.default.createElement(PDFPagination_1.default, null),
-        (currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.fileData) && (react_1.default.createElement(DownloadButton, { id: "pdf-download", href: currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.fileData, download: currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.uri },
+        (currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.fileData) && (react_1.default.createElement(DownloadButton, { id: "pdf-download", href: currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.fileData, download: currentDocument === null || currentDocument === void 0 ? void 0 : currentDocument.uri, type: 'document' },
             react_1.default.createElement(icons_1.DownloadPDFIcon, { color: "#000", size: "75%" }))),
-        react_1.default.createElement(ControlButton, { id: "pdf-zoom-out", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(zoomLevel - 0.1)); } },
+        react_1.default.createElement(ControlButton, { id: "pdf-zoom-out", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(zoomLevel - 0.1)); }, type: 'document' },
             react_1.default.createElement(icons_1.ZoomOutPDFIcon, { color: "#000", size: "80%" })),
-        react_1.default.createElement(ControlButton, { id: "pdf-zoom-in", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(zoomLevel + 0.1)); } },
+        react_1.default.createElement(ControlButton, { id: "pdf-zoom-in", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(zoomLevel + 0.1)); }, type: 'document' },
             react_1.default.createElement(icons_1.ZoomInPDFIcon, { color: "#000", size: "80%" })),
-        react_1.default.createElement(ControlButton, { id: "pdf-zoom-reset", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(reducer_1.initialPDFState.zoomLevel)); }, disabled: zoomLevel === reducer_1.initialPDFState.zoomLevel },
+        react_1.default.createElement(ControlButton, { id: "pdf-zoom-reset", onMouseDown: function () { return dispatch(actions_1.setZoomLevel(reducer_1.initialPDFState.zoomLevel)); }, disabled: zoomLevel === reducer_1.initialPDFState.zoomLevel, type: 'document' },
             react_1.default.createElement(icons_1.ResetZoomPDFIcon, { color: "#000", size: "70%" })),
-        numPages > 1 && (react_1.default.createElement(ControlButton, { id: "pdf-toggle-pagination", onMouseDown: function () { return dispatch(actions_1.setPDFPaginated(!paginated)); } },
+        numPages > 1 && (react_1.default.createElement(ControlButton, { id: "pdf-toggle-pagination", onMouseDown: function () { return dispatch(actions_1.setPDFPaginated(!paginated)); }, type: 'document' },
             react_1.default.createElement(icons_1.TogglePaginationPDFIcon, { color: "#000", size: "70%", reverse: paginated })))));
 };
 exports.default = PDFControls;

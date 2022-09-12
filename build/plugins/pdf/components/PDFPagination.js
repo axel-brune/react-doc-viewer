@@ -35,14 +35,14 @@ var icons_1 = require("./icons");
 var PDFPagination = function () {
     var _a = react_1.useContext(state_1.PDFContext), _b = _a.state, currentPage = _b.currentPage, numPages = _b.numPages, dispatch = _a.dispatch;
     return (react_1.default.createElement(Container, { id: "pdf-pagination" },
-        react_1.default.createElement(PageNavButtonLeft, { id: "pdf-pagination-prev", onClick: function () { return dispatch(actions_1.setCurrentPage(currentPage - 1)); }, disabled: currentPage === 1 },
+        react_1.default.createElement(PageNavButtonLeft, { id: "pdf-pagination-prev", onClick: function () { return dispatch(actions_1.setCurrentPage(currentPage - 1)); }, disabled: currentPage === 1, type: 'document' },
             react_1.default.createElement(icons_1.PrevPDFNavIcon, { color: "#000", size: "50%" })),
         react_1.default.createElement(PageTag, { id: "pdf-pagination-info" },
             "Page ",
             currentPage,
             "/",
             numPages),
-        react_1.default.createElement(PageNavButtonRight, { id: "pdf-pagination-next", onClick: function () { return dispatch(actions_1.setCurrentPage(currentPage + 1)); }, disabled: currentPage >= numPages },
+        react_1.default.createElement(PageNavButtonRight, { id: "pdf-pagination-next", onClick: function () { return dispatch(actions_1.setCurrentPage(currentPage + 1)); }, disabled: currentPage >= numPages, type: 'document' },
             react_1.default.createElement(icons_1.NextPDFNavIcon, { color: "#000", size: "50%" }))));
 };
 exports.default = PDFPagination;

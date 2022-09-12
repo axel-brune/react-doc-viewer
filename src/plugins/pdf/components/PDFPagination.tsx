@@ -18,6 +18,7 @@ const PDFPagination: FC<{}> = () => {
         id="pdf-pagination-prev"
         onClick={() => dispatch(setCurrentPage(currentPage - 1))}
         disabled={currentPage === 1}
+        type='document'
       >
         <PrevPDFNavIcon color="#000" size="50%" />
       </PageNavButtonLeft>
@@ -30,6 +31,7 @@ const PDFPagination: FC<{}> = () => {
         id="pdf-pagination-next"
         onClick={() => dispatch(setCurrentPage(currentPage + 1))}
         disabled={currentPage >= numPages}
+        type='document'
       >
         <NextPDFNavIcon color="#000" size="50%" />
       </PageNavButtonRight>
