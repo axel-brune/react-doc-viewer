@@ -31,7 +31,7 @@ const PDFControls: FC<{}> = () => {
           id="pdf-download"
           href={currentDocument?.fileData as string}
           download={currentDocument?.uri}
-          type='document'
+          type='button'
         >
           <DownloadPDFIcon color="#000" size="75%" />
         </DownloadButton>
@@ -40,7 +40,7 @@ const PDFControls: FC<{}> = () => {
       <ControlButton
         id="pdf-zoom-out"
         onMouseDown={() => dispatch(setZoomLevel(zoomLevel - 0.1))}
-        type='document'
+        type='button'
       >
         <ZoomOutPDFIcon color="#000" size="80%" />
       </ControlButton>
@@ -48,7 +48,7 @@ const PDFControls: FC<{}> = () => {
       <ControlButton
         id="pdf-zoom-in"
         onMouseDown={() => dispatch(setZoomLevel(zoomLevel + 0.1))}
-        type='document'
+        type='button'
       >
         <ZoomInPDFIcon color="#000" size="80%" />
       </ControlButton>
@@ -57,7 +57,7 @@ const PDFControls: FC<{}> = () => {
         id="pdf-zoom-reset"
         onMouseDown={() => dispatch(setZoomLevel(initialPDFState.zoomLevel))}
         disabled={zoomLevel === initialPDFState.zoomLevel}
-        type='document'
+        type='button'
       >
         <ResetZoomPDFIcon color="#000" size="70%" />
       </ControlButton>
@@ -66,7 +66,7 @@ const PDFControls: FC<{}> = () => {
         <ControlButton
           id="pdf-toggle-pagination"
           onMouseDown={() => dispatch(setPDFPaginated(!paginated))}
-          type='document'
+          type='button'
         >
           <TogglePaginationPDFIcon
             color="#000"

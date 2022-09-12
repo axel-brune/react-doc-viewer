@@ -48,9 +48,9 @@ exports.DocumentNav = function () {
             currentFileNo + 1,
             " of ",
             documents.length),
-        react_1.default.createElement(ButtonPrev, { id: "doc-nav-prev", onClick: function () { return dispatch(actions_1.previousDocument()); }, disabled: currentFileNo === 0, type: 'document' },
+        react_1.default.createElement(ButtonPrev, { id: "doc-nav-prev", onClick: function () { return dispatch(actions_1.previousDocument()); }, disabled: currentFileNo === 0, type: 'button' },
             react_1.default.createElement(icons_1.PrevDocIcon, { color: "#fff", size: "60%" })),
-        react_1.default.createElement(ButtonNext, { id: "doc-nav-next", onClick: function () { return dispatch(actions_1.nextDocument()); }, disabled: currentFileNo >= documents.length - 1, type: 'document' },
+        react_1.default.createElement(ButtonNext, { id: "doc-nav-next", onClick: function () { return dispatch(actions_1.nextDocument()); }, disabled: currentFileNo >= documents.length - 1, type: 'button' },
             react_1.default.createElement(icons_1.NextDocIcon, { color: "#fff", size: "60%" }))));
 };
 var Container = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  min-width: 150px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: flex-end;\n  margin: 0 10px;\n  color: ", ";\n"], ["\n  min-width: 150px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: flex-end;\n  margin: 0 10px;\n  color: ", ";\n"])), function (props) { return props.theme.text_primary; });
